@@ -1,0 +1,44 @@
+{
+    "env": {
+        "browser": true
+    },
+    "extends": [
+        "airbnb-base",
+        "eslint-config-prettier"
+    ],
+    "plugins": ["eslint-plugin-prettier"],
+    "parserOptions": {
+        "ecmaVersion": 2020
+    },
+    "parser": "babel-eslint",
+    "ignorePatterns": [
+        "node_modules/"
+    ],
+    "rules": {
+        "comma-dangle": "off",
+        "comma-spacing": "off",
+        "space-in-parens": "warn",
+        "no-multi-spaces": "warn",
+        "no-console": "warn",
+        "no-var": "warn",
+        "no-const-assign": "off",
+        "no-constant-condition": "off",
+        "no-new-object": "warn",
+        "no-unused-vars": "off",
+        "extensions": "off",
+        "quotes": ["error", "single", {
+            "allowTemplateLiterals": true
+        }],
+        "key-spacing": ["error", {
+            "beforeColon": false
+        }],
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": true
+            }
+        ],
+        "import/extensions": "off",
+        "import/no-unresolved": "off"
+    }
+}
