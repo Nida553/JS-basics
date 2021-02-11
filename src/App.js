@@ -14,17 +14,18 @@ import Routes from './Routes';
 import Navbar from './Pages/Navbar'
 import './Style.css';
 function App() {
-
+   
   return (
   <div className = "App">
 <h1>Welcome to the site</h1>
 <p>Choose one of styles or cutomize easily your site following your ideas.
-More demos are coming soon.</p>
-    
-   {/* <Navbar/> */}
+More demos are coming
+</p>
+   <Navbar/>
  <Router>
    <Routes/>
  </Router>
+ 
   </div>
   
    
