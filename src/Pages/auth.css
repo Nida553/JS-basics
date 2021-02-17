@@ -1,0 +1,29 @@
+.login {
+    background-color: darkkhaki ;
+    margin: auto;
+  width: 70%;
+ 
+  padding: 10px;
+}
+.sub {
+    margin: auto;
+    border: 3px solid green;
+    padding: 10px;
+    padding: 10px;
+}
+.submit {
+    background-color: darkkhaki;
+    margin: auto;
+    width: 25%;
+    border: 3px solid green;
+    padding: 10px;
+    margin-left: 123px;
+    cursor: pointer;
+}
+.App {
+    background-color: darkkhaki ;
+    margin: auto;
+  width: 30%;
+  margin-top: 148px;
+  padding: 10px;
+}
