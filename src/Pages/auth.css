@@ -1,10 +1,9 @@
 .login {
-    background-color: darkkhaki ;
+    
     margin: auto;
-  width: 70%;
- 
-  padding: 10px;
-}
+    width: 70%;
+    padding: 10px;
+  }
 .sub {
     margin: auto;
     border: 3px solid green;
@@ -12,18 +11,50 @@
     padding: 10px;
 }
 .submit {
-    background-color: darkkhaki;
+    
     margin: auto;
-    width: 25%;
+    width: 61%;
     border: 3px solid green;
     padding: 10px;
     margin-left: 123px;
-    cursor: pointer;
+    margin: auto
+    
+}
+.sign-in-submit{
+   
+    margin: auto;
+    width: 31%;
+    border: 3px solid green;
+    padding: 10px;
+    margin-left: 123px;
 }
 .App {
-    background-color: darkkhaki ;
+  background: aliceblue;
     margin: auto;
-  width: 30%;
+    width: 29%;
+    margin-top: 148px;
+    padding: 10px;
+}
+.resetSubmit{
+
+  margin: auto;
+  width: 31%;
+  border: 3px solid green;
+  padding: 10px;
+  margin-left: 123px;
+}
+.welcome{
+  
+  margin: auto;
+  
   margin-top: 148px;
   padding: 10px;
+}
+.submitform {
+  width: 20%;
+  align-self: auto;
+}
+.text {
+  border-radius: 25%;
+
 }

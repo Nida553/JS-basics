@@ -3,10 +3,15 @@ import './auth.css'
 
  const Welcome =({handleLogOut})  =>{
     return (
-        <div className = "App">
+        <div className = "welcome">
             <nav>
-            <h2>Welcome</h2>
+            
+            
             <button  className="submit" onClick ={handleLogOut}>Logout</button>
+           
+            <button  className="submit" onClick ={handleLogOut}>List of projects</button>
+            <button  className="submit" onClick ={handleLogOut}>Logout</button>
+
             </nav>
             
         </div>

@@ -1,24 +1,10 @@
-import logo from './logo.svg';
-import Button from '@material-ui/core/Button'
-import Drawer from '@material-ui/core/Drawer'
-import list from '@material-ui/core/List'
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar'
-import Tab from '@material-ui/core/Tab'
-import Tabs from '@material-ui/core/Tabs'
 import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
-import Home from './Pages/Home';
 import {React, useEffect,useState} from "react";
 import Routes from './Routes';
-import Navbar from './Pages/Navbar'
-import './Style.css';
-import fire from './Firebase'
+import fire from './Pages/Firebase'
 import Welcome from './Pages/Welcome'
-import Logiin from './Pages/Login'
-import BasicTable from './Pages/BasicTable';
-import EditBlog from './Pages/EditBlog';
 import Login from './Pages/Login';
-import PwGenerator from './Pages/PwGenerator'
+
 
 
 
@@ -29,7 +15,8 @@ const App = () => {
    const [emailError, setEmailError] = useState('');
    const [passwordError, setPasswordError] = useState('');
    const [hasAccount, setHasAccount] = useState(false);
-
+   
+   
    const clearInputs = () => {
      setEmail('');
      setPassword('');
@@ -38,7 +25,8 @@ const App = () => {
      setEmailError('');
      setPasswordError('');
    }
-   const handleLogin = () =>{
+   const handleLogin = (e) =>{
+      
      clearErrors();
      fire
      .auth()
@@ -56,6 +44,8 @@ const App = () => {
        }
      });
    }
+
+   
    const handleSignup = () =>{
      clearErrors();
     fire
@@ -89,14 +79,27 @@ const App = () => {
      });
    };
 
+   const handleAddProject = () => {
+     //do something
+   }
 
 
    useEffect(()=>{
     authListener();
    },[]);
+const handleReset = (email) => {
+  
+  fire.auth().sendPasswordResetEmail(email)
+  .then(function (email) {
+    alert('Please check your email...')
+  }).catch(function (e) {
+    console.log(e)
+  })
+}
 
   return (
   <div className = "App">
+    
     {user ? ( <Welcome handleLogOut = {handleLogOut} />) :
     (
       <Login 
@@ -109,17 +112,16 @@ password = {password}
  hasAccount = {hasAccount}
  setHasAccount = {setHasAccount}
  emailError = {emailError}
- passwordError = {passwordError} />
+ passwordError = {passwordError}
+ handleReset = {handleReset}
+ />
     )
  
   }
 
-  <PwGenerator />
  <Router>
    <Routes/>
  </Router>
-
- 
   </div>
   
    

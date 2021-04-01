@@ -3,21 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.12.3",
     "faker": "^5.4.0",
     "firebase": "^8.2.7",
+    "firebase-tools": "^9.4.0",
     "husky": "^5.0.9",
+    "mime": "^2.5.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
+    "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-table": "^7.6.3",
+    "redux": "^4.0.5",
+    "typescript": "^4.2.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -26,7 +36,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./ --ext=js,ts --ignore-pattern node_modules/",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "emulators": "firebase emulators:start"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
     "eslint": "^7.19.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^7.2.0",

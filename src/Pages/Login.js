@@ -1,52 +1,76 @@
-import {React,useEffect} from 'react'
+import {React,useEffect,useState} from 'react'
 import './auth.css'
- const  Login = (props)  =>{
 
+
+// const isNumberRegx = /\d/;
+// const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+ const  Login = (props)  =>{
+const [passwordFocused,setPasswordFocused] = useState(false);
+// const [passwordValidity,setpasswordValidity] = useState({
+//     minCharacter: null,
+//     number  : null,
+//     specialChar : null,
+
+// });
+
+// const onChangePassword = () => {
+//     setPassword(password);
+//     setpasswordValidity({
+//         minCharacter: password.length>= 8 ? true : false,
+//         number : isNumberRegx.test(password) ? true :false ,
+//         specialChar : specialCharacterRegx.test(password) ? true :false
+//     })
+// }
     useEffect(() => {
         document.title = "Login"
       }, [])
-     const {email
+     const {
+         email
         ,password
         ,setEmail
         ,setPassword
         ,handleLogin
         ,handleSignup
+        ,handleReset
         ,hasAccount
         ,setHasAccount
-         ,emailError
-        ,passwordError } = props;
+        ,emailError
+        ,passwordError 
+    } = props;
         
     return (
        <section className = "login">
 <div className = "loginConatainer">
-    <label>User Name</label>
-    <input type = "text" autoFocus required value ={email} onChange = {e=>setEmail(e.target.value)} />
-    <p className= "errmsg">{emailError}</p>
-    <label>Password    </label>
-    <input type = "password" required value = {password} onChange = {e => setPassword(e.target.value)} />
-    <div>
-    <div>Contains more than 8 character</div>
-    <div>Contains Number</div>
-    <div>Contains UpperCase</div>
-    <div>Contains Sybmols</div>
+               
+                <input placeholder = "Name" type="text" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)} />
+                <p className="errmsg">{emailError}</p>
+                
+                <input placeholder = "Password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
 
-    </div>
-   
-    <p className= "errmsg">{passwordError}</p>
-    <div  className = "btnContainer">
+                <p className="errmsg">{passwordError}</p>
+                <div>
         {hasAccount  ? (
             <>
-            <button className="submit" disabled = {true} onClick = {handleLogin}>
+            <button className="sign-in-submit"  onClick = {handleLogin}>
 Sign In
+            </button><button className="resetSubmit"  onClick = {handleReset}>
+Reset
             </button>
+
+            
+             
+
+          
             <p>Don't have an account ? <span className="submit" onClick = {() => setHasAccount(!hasAccount)}>
                 Sign up
             </span>
                 </p>
+                
             </>
         ):( 
             <>
-            <button className="submit" disabled = {true} onClick = {handleSignup}>
+            
+            <button className="submit"  onClick = {handleSignup}>
 Sign Up
             </button>
             <p>
@@ -56,6 +80,7 @@ Sign Up
                 </p>
             </>
         )
+        
 
         }
     </div>
