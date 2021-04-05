@@ -4,6 +4,7 @@ import Routes from './Routes';
 import fire from './Pages/Firebase'
 import Welcome from './Pages/Welcome'
 import Login from './Pages/Login';
+import "tailwindcss/tailwind.css"
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
    const [hasAccount, setHasAccount] = useState(false);
    
    
+
    const clearInputs = () => {
      setEmail('');
      setPassword('');

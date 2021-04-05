@@ -14,6 +14,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.12.3",
+    "express": "^4.17.1",
     "faker": "^5.4.0",
     "firebase": "^8.2.7",
     "firebase-tools": "^9.4.0",
@@ -58,7 +59,9 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.4",
     "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "^10.2.5",
     "eslint": "^7.19.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^7.2.0",
@@ -66,7 +69,9 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "postcss": "^8.2.9",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.0.4"
   },
   "husky": {
     "hooks": {
