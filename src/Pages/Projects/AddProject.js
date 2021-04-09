@@ -116,9 +116,9 @@ const AddProject = () => {
   const classes = useStyles();
 
   return (
-
+<div></div>
     // <form className={classes.root} onSubmit={handleSubmit}  >
-    
+
     //  <FormGroup>
     //     <Label>Title</Label>
     //     <Input type="text" value={title} onChange={onChange} name="title" placeholder="Enter title" required></Input>
@@ -126,8 +126,8 @@ const AddProject = () => {
     //   <Button type="submit">Submit</Button>
     // </form>
 
-    <div></div>
-  );
+  
+  )
 }
 
 export default AddProject;

@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react'
-import './auth.css'
+// import './auth.css'
 
 
 // const isNumberRegx = /\d/;
@@ -10,7 +10,7 @@ const Login = (props) => {
     //     minCharacter: null,
     //     number  : null,
     //     specialChar : null,
-
+  
     // });
 
     // const onChangePassword = () => {

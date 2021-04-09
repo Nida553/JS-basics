@@ -31,7 +31,7 @@ export default class Routes extends Component {
             <Route exact path ="/projects/add" component = {AddProject} />
             {/* <Route exact path = "/projects" component = {ListProject} /> */}
             <Route exact path = "/projects" component = {ListProjects} />
-            <Route exact path = "/list" component = {tailwindList} />
+            <Route exact path = "/list" component = { tailwindList} />
             <Route exact path = "/login" component = {Login} />
             {/* <Route exact path = "/registerType" component = {typescript/Register} /> */}
 

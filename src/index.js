@@ -1,14 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {createStore}  from 'redux'
+import { createStore }  from 'redux'
 import App from './App'
+import { Provider } from 'react-redux'
+import rootReducer from './store/reducers/rootReducer'
+import './Pages/Projects/styles/tailwind.css'
 
-
-const store = createStore();
+const store = createStore(
+    rootReducer
+);
 
 ReactDOM.render(
 
-<Provider store={store}>
+<Provider store = {store}>
     <App />
 </Provider>
 

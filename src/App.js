@@ -4,7 +4,9 @@ import Routes from './Routes';
 import fire from './Pages/Firebase'
 import Welcome from './Pages/Welcome'
 import Login from './Pages/Login';
-import "tailwindcss/tailwind.css"
+import "tailwindcss/tailwind.css";
+import '../src/'
+
 
 
 
@@ -102,7 +104,7 @@ const handleReset = (email) => {
   return (
   <div className = "App">
     
-    {user ? ( <Welcome handleLogOut = {handleLogOut} />) :
+    {/* {user ? ( <Welcome handleLogOut = {handleLogOut} />) :
     (
       <Login 
 email = {email} 
@@ -119,7 +121,7 @@ password = {password}
  />
     )
  
-  }
+  } */}
 
  <Router>
    <Routes/>
