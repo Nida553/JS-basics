@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route, Redirect } from "react-router-dom";
 import ContactUs from './Pages/ContactUs';
 import Portfolio from './Pages/Portfolio';
 import About from './Pages/About'
@@ -28,11 +28,12 @@ export default class Routes extends Component {
             <Route exact path = "/blogs" component = {Bloglist}/>
             <Route exact path = "/projects/add" component ={AddProject} />
             <Route exact path = "/blog/:id" component = {BlogDetail} />
-            <Route exact path ="/projects/add" component = {AddProject} />
+            <Route exact path ="/add" component = {AddProject} />
             {/* <Route exact path = "/projects" component = {ListProject} /> */}
             <Route exact path = "/projects" component = {ListProjects} />
             <Route exact path = "/list" component = { tailwindList} />
             <Route exact path = "/login" component = {Login} />
+            <Redirect to="/" />
             {/* <Route exact path = "/registerType" component = {typescript/Register} /> */}
 
                         </Switch>

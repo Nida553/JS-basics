@@ -28,6 +28,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-table": "^7.6.3",
+    "reactstrap": "^8.9.0",
     "redux": "^4.0.5",
     "tailwind-react-ui": "^0.8.1",
     "typescript": "^4.2.2",
